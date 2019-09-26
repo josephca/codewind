@@ -238,8 +238,8 @@ pipeline {
                                 ./script/publish.sh $i $REGISTRY $TAG
 
                                 if [[ $GIT_BRANCH =~ ^([0-9]+\\.[0-9]+) ]]; then
-                                    TAG_MAJOR = $GIT_BRANCH.tokenize(".")[0]​
-                                    TAG_MINOR = $GIT_BRANCH.tokenize(".")[1]​
+                                    TAG_MAJOR = $GIT_BRANCH.tokenize('.')[0]​
+                                    TAG_MINOR = $GIT_BRANCH.tokenize('.')[1]​
 
                                     TAG_CUMULATIVE= $TAG_MAJOR.$TAG_MINOR
                                     
