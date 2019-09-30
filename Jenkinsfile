@@ -240,19 +240,6 @@ pipeline {
                             do
                                 echo "Publishing $REGISTRY/$i:$TAG"
                                 ./script/publish.sh $i $REGISTRY $TAG
-<<<<<<< HEAD
-
-                                if [[ $GIT_BRANCH =~ ^([0-9]+\\.[0-9]+) ]]; then
-                                    TAG_MAJOR = $GIT_BRANCH.tokenize('.')[0]​
-                                    TAG_MINOR = $GIT_BRANCH.tokenize('.')[1]​
-
-                                    TAG_CUMULATIVE= $TAG_MAJOR.$TAG_MINOR
-                                    
-                                    echo "Publishing $REGISTRY/$i:$TAG_CUMULATIVE"
-                                    ./script/publish.sh $i $REGISTRY $TAG_CUMULATIVE
-                                fi 
-=======
->>>>>>> 0202644823d86d1b216a2d3f9e433a10cfaeef23
                             done
                         else
                             echo "Skip publishing docker images for $GIT_BRANCH branch"
